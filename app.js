@@ -32,6 +32,8 @@ client.connect(async (err) => {
 		app.use(bodyParser.urlencoded({ extended: true }));
 		app.use(bodyParser.json());
 		require('./controller/baseRoute.js')(app);
+		console.log(process.env);
+		console.log(process.env.PORT)
 		app.listen(8080, () => console.log(`Example app listening on port `));
 		console.log("App listening on port 8080");
 	}
