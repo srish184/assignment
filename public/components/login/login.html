@@ -1,0 +1,38 @@
+<div>
+        <div>
+                <h2 class="centerAlign">Login</h2>
+        </div>
+        <div class="centerAlign"><span ng-if="dataCount==0">
+                        <p class="errorMsg">{{errorMsg}}</p>
+                </span></div>
+        <div class="loginDiv">
+                <form name="loginform">
+                        <div>
+                                <label for="inputEmail">Email</label>
+                                <input type="email" ng-model="emailId" name="emaiId"
+                                        placeholder="ex. john.doe@provider.com" autofocus required
+                                        ng-pattern="emailpattern">
+                                <p class="errorMsg" ng-show="loginform.emaiId.$error.pattern">Please enter email in
+                                        given format(e.g:
+                                        abc@def.com)
+                                </p>
+
+                                <label for="inputPassword">Password</label>
+                                <input type="password" ng-model="pasw" name="passw" autocomplete="off" required
+                                        ng-pattern="passwordValidation">
+                                <p class="errorMsg" ng-show="loginform.oldpassword.$error.pattern">Invalid Password(Must
+                                        contain at
+                                        least one
+                                        number, one uppercase, lowercase letters and at least 8 or more characters)
+                                </p>
+                        </div>
+                        <button type="submit" class="buttonLogin" data-ng-click=login(loginform)>Login</button>
+                        <button type="submit" class="forgotPwd" ng-click="forgotPassword()">Forgot Password</button>
+                        <br><br>
+                        <h3>Don't have an account yet? &nbsp;
+                                <button type="button" ng-click="signUp()">Register</button></h3>
+
+                </form>
+        </div>
+
+</div>

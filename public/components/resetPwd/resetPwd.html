@@ -1,0 +1,46 @@
+<div>
+    <div>
+        <h2 class="centerAlign">Reset Password</h2>
+    </div>
+    <div class="centerAlign"><span ng-if="!login">
+            <p class="errorMsg">{{success_res.displayMsg}}</p>
+        </span>
+        <span ng-if="login">
+            <p class="successMsg">{{success_res.displayMsg}}</p>
+        </span></div>
+    <div class="mainDiv">
+        <form name="forgotForm">
+            <div>
+                <label for="inputEmail">Email</label>
+                <input class="labelSpaceEmail" type="email" ng-model="emailId" name="emaiId"
+                    placeholder="ex. john.doe@provider.com" autofocus required ng-pattern="emailpattern">
+                <p class="errorMsg" ng-show="forgotForm.emaiId.$error.pattern">Please enter email in given format(e.g:
+                    abc@def.com)
+                </p>
+            </div>
+            <div>
+                <label for="inputOldPassword">Old Password</label>
+                <input class="labelSpaceOldpass" type="password" ng-model="oldpassword" name="oldpassword"
+                    autocomplete="off" required ng-pattern="passwordValidation">
+                <p class="errorMsg" ng-show="forgotForm.oldpassword.$error.pattern">Invalid Password(Must contain at
+                    least one
+                    number, one uppercase, lowercase letters and at least 8 or more characters)
+                </p>
+            </div>
+            <div>
+                <label for="inputNewPassword">New Password</label>
+                <input class="labelSpaceNewPass" type="password" ng-model="newpassword" name="newpassword"
+                    autocomplete="off" required ng-pattern="passwordValidation">
+                <p class="errorMsg" ng-show="forgotForm.newpassword.$error.pattern">Invalid Password(Must contain at
+                    least one
+                    number, one uppercase, lowercase letters and at least 8 or more characters)
+                </p>
+            </div>
+            <div>
+                <button type="submit" data-ng-click=resetPwd(forgotForm)>Reset Password</button>
+                <button type="submit" ng-click=loginPage()>Login</button>
+            </div>
+
+        </form>
+    </div>
+</div>

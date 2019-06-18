@@ -1,0 +1,80 @@
+.errorMsg {
+    color: red;
+}
+
+.successMsg{
+    color: green;
+}
+
+a:link {
+    text-decoration: underline;
+    }
+
+.loginDiv{
+    position: relative;
+    top: 20px;
+    left: 35%;
+}
+
+.buttonLogin{
+    position: relative;
+    margin-left: 11%;
+
+}
+
+.mainDiv{
+    position: relative;
+    top: 20px;
+    left: 42%;
+}
+
+.centerAlign{
+    text-align: center
+}
+
+.padTable{
+    padding: 40px;
+}
+
+.widthTable{
+    width: 100%;
+}
+
+.logoutRight{
+    float:right
+}
+
+.labelSpaceEmail{
+    right: 3px;
+    margin-left: 5%;
+    position: relative;
+}
+
+.labelSpaceEmailReg{
+    left: 3px;
+    margin-left: 3%;
+    position: relative;
+}
+
+.labelSpaceOldpass{
+    left: 1%;
+    position: relative;
+}
+
+.labelSpaceNewPass{
+    margin-left: 1%;
+    right: 6px;
+    position: relative;
+}
+
+.labelSpaceUserName{
+    margin-left: 1%;
+    right: 6px;
+    position: relative;
+}
+
+.labelSpacePass{
+    margin-left: 1%;
+    left: 6px;
+    position: relative;
+}

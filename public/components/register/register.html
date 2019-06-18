@@ -1,0 +1,46 @@
+<div>
+    <div>
+        <h2 class="centerAlign">Registration</h2>
+    </div>
+    <div class="centerAlign"><span ng-if="!login">
+            <h3 class="errorMsg">{{success_res.displayMsg}}</h3>
+        </span>
+        <span ng-if="login">
+            <h3 class="successMsg">{{success_res.displayMsg}}</h3>
+        </span></div>
+    <div class="mainDiv">
+        <form name="regForm">
+            <div>
+                <label for="inputEmail">Email</label>
+                <input type="email" class="labelSpaceEmailReg" ng-model="emailId" name="emaiId"
+                    placeholder="ex. john.doe@provider.com" autofocus required ng-pattern="emailpattern">
+                <p class="errorMsg" ng-show="regForm.emaiId.$error.pattern">Please enter email in given format(e.g:
+                    abc@def.com)
+                </p>
+            </div>
+            <div>
+                <label for="inputPassword">Password</label>
+                <input type="password" class="labelSpacePass" ng-model="pasw" name="passw" autocomplete="off"
+                    ng-pattern="passwordValidation" required>
+                <p class="errorMsg" ng-show="regForm.passw.$error.pattern">Invalid Password(Must contain at least one
+                    number and one uppercase and lowercase letter, and at least 8 or more characters)
+                </p>
+
+            </div>
+            <div>
+                <label for="inputName">User Name</label>
+                <input type="text" class="labelSpaceUserName" ng-model="userName" name="userName" required
+                    ng-pattern="nameTextpattern">
+                <p class="errorMsg" ng-show="regForm.userName.$error.pattern">Please provide only alphabets. Numbers and
+                    symbols are not allowed.</p>
+                </p>
+            </div>
+            <div>
+                <button type="submit" data-ng-click=register(regForm)>Register</button>
+                <button type="submit" ng-click=loginPage()>Login</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>

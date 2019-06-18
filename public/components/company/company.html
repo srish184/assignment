@@ -1,0 +1,60 @@
+<div class="col-md-12">
+    <h2 class="centerAlign">Company Dashboard</h2>
+</div>
+<div class="col-md-12">
+    <input class="col-md-3" type="text" ng-attr-placeholder="Search..." ng-model="search" />
+    <span ng-if="fav">
+        <a href="" ng-click="getFavCompany()">My Favourite Company</a>
+    </span>
+    <span ng-if="!fav">
+        <a href="" ng-click="cmpny.getCompanyDetails()">All Company</a>
+    </span>
+    <span class="logoutRight">
+        <button type="button" ng-click="cmpny.logout()">Logout</button>
+    </span>
+</div>
+<div class="centerAlign"><span ng-if="!updateSuccuss">
+        <p class="errorMsg">{{success_res.displayMsg}}</p>
+    </span>
+    <span ng-if="updateSuccuss">
+        <p class="successMsg">{{success_res.displayMsg}}</p>
+    </span></div>
+<div>
+    <div class="padTable">
+        <table class="widthTable">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" ng-click="sort('-company_name')">Company Name
+                            <i class="fa" ng-show="sortKey=='-company_name'"
+                                ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reverse}"></i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" ng-click="sort('-address')">Address
+                            <i class="fa" ng-show="sortKey=='-address'"
+                                ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reverse}"></i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" ng-click="sort('-phone_no')">Phone Number
+                            <i class="fa" ng-show="sortKey=='-phone_no'"
+                                ng-class="{'fa-sort-asc':reverse,'fa-sort-desc':!reverse}"></i>
+                        </a>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="company in companyList | orderBy:sortKey:reverse | filter:search">
+                    <td>{{company.company_name}}</td>
+                    <td>{{company.address}}</td>
+                    <td>{{company.phone_no}}</td>
+                    <td><span><a ng-click="favourite(company._id, !company.status)" href="javascript:void(0)"><i
+                                    class="fa-star" ng-class="company.status?'fas':'far'"></i></a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

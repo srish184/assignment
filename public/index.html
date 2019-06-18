@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>User App</title>
+	<script src="/assets/libs/angular.1.6.9.min.js"></script>
+	<script src="/assets/libs/angular-route.js"></script>
+	<script src="/assets/libs/angular-route-min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap2/bootstrap-switch.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body ng-app="app">
+	<div ng-view></div>
+	<script src="app.js"></script>
+	<script src="./components/login/loginCtrl.js"></script>
+	<script src="./components/register/registerCtrl.js"></script>
+	<script src="./components/company/companyCtrl.js"></script>
+	<script src="./components/resetPwd/resetPwdCtrl.js"></script>
+</body>
+
+</html>
