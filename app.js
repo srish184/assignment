@@ -34,7 +34,7 @@ client.connect(async (err) => {
 		require('./controller/baseRoute.js')(app);
 		console.log(process.env);
 		console.log(process.env.PORT)
-		app.listen(8080, () => console.log(`Example app listening on port `));
+		app.listen(process.env.PORT, () => console.log(`Example app listening on port `));
 		console.log("App listening on port 8080");
 	}
 });
