@@ -5,12 +5,10 @@
 		"start": "node app.js"
 	},
 	"dependencies": {
-		"@sendgrid/mail": "^6.4.0",
 		"async": "x.x.x",
 		"body-parser": "*",
 		"express": "4.15.x",
 		"mongodb": "^3.2.7",
-		"nodemailer": "^6.2.1",
 		"rootpath": "^0.1.2"
 	},
 	"repository": {},
