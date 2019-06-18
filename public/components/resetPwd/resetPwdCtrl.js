@@ -8,7 +8,7 @@ app.controller('resetPasswordController', function ($scope, $location, $http) {
             if ($scope.emailId !== undefined && $scope.oldpassword !== undefined && $scope.newpassword !== undefined) {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8080/resetPassword',
+                    url: 'https://user-company.herokuapp.com/resetPassword',
                     data: {
                         "email_id": $scope.emailId,
                         "old_password": $scope.oldpassword,

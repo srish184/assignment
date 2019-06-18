@@ -8,7 +8,7 @@ app.controller('companyController', function ($scope, $http, $location, $window)
         $scope.companyList = [];
         $http({
             method: 'POST',
-            url: 'http://localhost:8080/getCompanyList',
+            url: 'https://user-company.herokuapp.com/getCompanyList',
             data: {
                 "user_id": user_id
             },
@@ -41,7 +41,7 @@ app.controller('companyController', function ($scope, $http, $location, $window)
         var user_id = JSON.parse(user_details)[0]._id;
         $http({
             method: 'POST',
-            url: 'http://localhost:8080/favouriteCompany',
+            url: 'https://user-company.herokuapp.com/favouriteCompany',
             data: {
                 "company_id": company_id,
                 "status": status,
@@ -74,7 +74,7 @@ app.controller('companyController', function ($scope, $http, $location, $window)
         $scope.companyList = [];
         $http({
             method: 'POST',
-            url: 'http://localhost:8080/getFavCompanyList',
+            url: 'https://user-company.herokuapp.com/getFavCompanyList',
             data: {
                 user_id: user_id
             },

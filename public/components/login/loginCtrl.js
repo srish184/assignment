@@ -15,7 +15,7 @@ app.controller('loginController', function ($scope, $location, $http) {
 			if ($scope.emailId !== undefined && $scope.pasw !== undefined) {
 				$http({
 					method: 'POST',
-					url: 'http://localhost:8080/loginUser',
+					url: 'https://user-company.herokuapp.com/loginUser',
 					data: {
 						"email_id": $scope.emailId,
 						"password": $scope.pasw

@@ -10,7 +10,7 @@ app.controller('regController', function ($scope, $http, $location) {
             if ($scope.emailId !== undefined && $scope.pasw !== undefined && $scope.userName !== undefined) {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8080/registerUser',
+                    url: 'https://user-company.herokuapp.com/registerUser',
                     data: {
                         "user_name": $scope.userName,
                         "email_id": $scope.emailId,
