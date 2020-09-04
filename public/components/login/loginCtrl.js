@@ -24,6 +24,7 @@ app.controller('loginController', function ($scope, $location, $http) {
 						'Content-Type': 'application/json'
 					}
 				}).then(function (response) {
+					console.log(response);
 					$scope.respData = response.data;
 					$scope.dataCount = response.data.length;
 
